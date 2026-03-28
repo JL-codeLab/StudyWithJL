@@ -4,11 +4,19 @@ import java.util.Arrays;
 
 public class Dia {
 
-    String dia;
-    Disciplina[] disciplinas;
+    private String dia;
+    private Disciplina[] disciplinas;
 
-    public Dia(String dia, Disciplina[] disciplinas) {
-        this.disciplinas = disciplinas;
+    public Dia(String dia, int quantDisciplinas) {
+        this.dia = dia;
+        disciplinas = new Disciplina[quantDisciplinas];
+    }
+
+    public void setDisciplina(int index, Disciplina disc) {
+        if (index < 0 || index >= disciplinas.length) {
+            throw new IndexOutOfBoundsException("Índice inválido.");
+        }
+        disciplinas[index] = disc;
     }
 
     @Override

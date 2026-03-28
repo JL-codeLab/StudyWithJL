@@ -1,16 +1,22 @@
 package src;
 
+import java.util.ArrayList;
+
 public class StudyWithJL {
 
-    Profile p;
-    HashMap<Disciplina> disciplinas;
+    Profile me;
+    ArrayList<Disciplina> disciplinas;
 
     public StudyWithJL() {
-        this.p = new Profile();
+        disciplinas = new ArrayList<Disciplina>();
     }
 
-    public setDisciplinas(String sigla, String disciplina, String livros, int periodoDisciplina) {
-        Disciplina cadeira = new Disciplina(disciplina, livros, periodoDisciplina); 
+    public void cadastraPerfil(String nome, int idade, int periodoFaculdade, int horasEstudo) {
+        me = new Profile(nome, idade, periodoFaculdade, horasEstudo);
+    }
+
+    public void setDisciplinas(String sigla, String disciplina, String livros, int periodoDisciplina) {
+        Disciplina cadeira = new Disciplina(disciplina);
         this.disciplinas.add(cadeira);
     }
 }
