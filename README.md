@@ -1,6 +1,6 @@
 # StudyWithJL
 
-Este é um gerenciador de estudos.
+Este é um gerenciador de estudos no estilo JL.
 Um programa que vai nos ajudar a montarmos um plano de estudo para uso pessoal com base na sua própria realidade.
 
 O programa deve pedir ao usuário a ser cadastrado um limite de horas de estudo por dia e quantos dias da semana vai estudar, além de
